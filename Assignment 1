@@ -1,0 +1,48 @@
+# Assembly
+CIS 11 - Computer Architecture - Assignment 1
+
+[ ] 1.1.3 Section Review, Questions 1,3, 8, 12
+
+1) A linker combines individual files created by an assembler into a single executable program.
+
+3) a one-to-many relationship, a single statement expands into multiple assembly language or machine instructions
+
+8)C++ does not allow a pointer of one type to be assigned to a pointer of another type.
+  Assembly language has no such restriction regarding pointers.
+
+12)
+  mov eax, Y
+  mov ebx, 4
+  imul, ebx
+  add eax, 3
+  mov X, eax
+**************************************************************
+- [ ] 1.2.1 Section Review, Questions 2, 3, 10
+
+2) There is no need for another program to interpret the language. The time the processor takes to translate the langauge takes more 
+time.
+
+3)True.
+
+10) Level 2
+
+*****************************************************************
+- [ ] 1.3.9 Section Review, Questions 2, 3, 5, 6, 7 
+2) 
+
+3)a. 00001111  + 00000010 = 00010001
+  b. 11010101  + 01101011 = 0101000000
+  c. 00001111  + 00001111 = 011110
+
+
+
+
+
+
+
+
+
+
+- [ ] 1.7.1 Short Answer, Questions 1-22 and 25
+- [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
+- [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 (1 point extra credit per question)
