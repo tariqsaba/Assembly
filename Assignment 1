@@ -44,5 +44,30 @@ time.
 
 
 - [ ] 1.7.1 Short Answer, Questions 1-22 and 25
+1 The MSB is sometimes referred to as the left-most bit due to the convention in positional notation of
+writing more significant digits further to the left.
+2 (a) 53 (b) 150 (c) 204
+3(a) 110001010 (b) 110010110 (c) 100100001
+4 
+5  2 , 4, 8, 16 
+6 
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+25
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
 - [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 (1 point extra credit per question)
+
