@@ -1,0 +1,35 @@
+3.1.11 Section Review, Questions 1, 2, 3, 4
+
+1. Using the value –35, write it as an integer literal in decimal, hexadecimal, octal, and binary
+formats that are consistent with MASM syntax.
+-35d, DDh, 335o, 11011101b
+2. (Yes/No): Is A5h a valid hexadecimal literal? 
+no
+3. (Yes/No): Does the multiplication operator (*) have a higher precedence than the division
+operator (/) in integer expressions? 
+no
+*4. Create a single integer expression that uses all the operators from Section 3.1.2. Calculate
+the value of the expression.
+*5. Write the real number –6.2  104 as a real number literal using MASM syntax.
+
+- [ ] 3.2.4 Section Review, Questions 4, 5
+4)In the AddTwo program, which register holds the sum?
+
+5)In the AddTwo program, which statement halts the program?
+
+
+- [ ] 3.3.3 Section Review, Questions 1, 2, 3, 4
+1. What types of files are produced by the assembler?
+2. (True/False): The linker extracts assembled procedures from the link library and inserts
+them in the executable program.
+3. (True/False): When a program’s source code is modified, it must be assembled and linked
+again before it can be executed with the changes.
+4. Which operating system component reads and executes programs?
+
+- [ ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
+- [ ] 3.5.5 Section Review Question 3
+- [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
+- [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
+- [ ] 3.10 Programming Exercises, Pick any 1 exercise
+
+
