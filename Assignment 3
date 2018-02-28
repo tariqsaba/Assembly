@@ -14,22 +14,43 @@ the value of the expression.
 
 - [ ] 3.2.4 Section Review, Questions 4, 5
 4)In the AddTwo program, which register holds the sum?
-
+eax
 5)In the AddTwo program, which statement halts the program?
-
-
+ExitProcess.
 - [ ] 3.3.3 Section Review, Questions 1, 2, 3, 4
 1. What types of files are produced by the assembler?
 2. (True/False): The linker extracts assembled procedures from the link library and inserts
 them in the executable program.
+true
 3. (True/False): When a program’s source code is modified, it must be assembled and linked
 again before it can be executed with the changes.
+True
 4. Which operating system component reads and executes programs?
+Loader
 
 - [ ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
+
+1. Create an uninitialized data declaration for a 16-bit signed integer.
+var1 SWORD
+2. Create an uninitialized data declaration for an 8-bit unsigned integer.
+var2 BYTE 
+3. Create an uninitialized data declaration for an 8-bit signed integer.
+var3 SBYTE
+4. Create an uninitialized data declaration for a 64-bit integer.
+var4 QWORD
+5. Which data type can hold a 32-bit signed integer?
+SDWORD
+
 - [ ] 3.5.5 Section Review Question 3
+
+Write a statement that causes the assembler to calculate the number of bytes in the follow-
+ing array, and assign the value to a symbolic constant named ArraySize:
+myArray WORD 20 DUP(?)
+
 - [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
+
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
+
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
 
 
