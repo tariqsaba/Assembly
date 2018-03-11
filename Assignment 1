@@ -28,22 +28,42 @@ time.
 
 *****************************************************************
 - [ ] 1.3.9 Section Review, Questions 2, 3, 5, 6, 7 
-2) 
+2) What is the decimal representation of each of the following unsigned binary integers?
+a. 11111000 = >248
+b. 11001010    202
+c. 11110000     240
 
 3)a. 00001111  + 00000010 = 00010001
   b. 11010101  + 01101011 = 0101000000
   c. 00001111  + 00001111 = 011110
 
+5. What is the minimum number of binary bits needed to represent each of the following
+unsigned decimal integers?
+a. 65
+b. 409
+c. 16385
 
+6. What is the hexadecimal representation of each of the following binary numbers?
+a. 0011 0101 1101 1010 (a) 35DA  
+b. 1100 1110 1010 0011 (b) CEA3
+c. 1111 1110 1101 1011 (c) FEDB
 
-
-
-
-
-
-
+7. What is the binary representation of the following hexadecimal numbers?
+a. A4693FBC:  
+b. B697C7A1:
+c. 2B3D9461:
 
 - [ ] 1.7.1 Short Answer, Questions 1-22 and 25
+
+
+
+
+
+
+
+
+
+
 1 The MSB is sometimes referred to as the left-most bit due to the convention in positional notation of
 writing more significant digits further to the left.
 2 (a) 53 (b) 150 (c) 204
@@ -52,9 +72,11 @@ writing more significant digits further to the left.
 5  2 , 4, 8, 16 
 6 
 7
-8
-9
-10
+8 (a) 0000 0001 0010 0110 1111 1001 1101 0100
+(b) 0110 1010 1100 1101 1111 1010 1001 0101
+(c) 1111 0110 1001 1011 1101 1100 0010 1010
+9 (a) 58 (b) 447 (c) 16534
+10 
 11
 12
 13
