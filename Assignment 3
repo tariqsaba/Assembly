@@ -10,14 +10,16 @@ operator (/) in integer expressions?
 no
 *4. Create a single integer expression that uses all the operators from Section 3.1.2. Calculate
 the value of the expression.
-*5. Write the real number –6.2  104 as a real number literal using MASM syntax.
 
-- [ ] 3.2.4 Section Review, Questions 4, 5
+
+- [done ] 3.2.4 Section Review, Questions 4, 5
 4)In the AddTwo program, which register holds the sum?
 eax
 5)In the AddTwo program, which statement halts the program?
 ExitProcess.
-- [ ] 3.3.3 Section Review, Questions 1, 2, 3, 4
+
+
+- [done ] 3.3.3 Section Review, Questions 1, 2, 3, 4
 1. What types of files are produced by the assembler?
 2. (True/False): The linker extracts assembled procedures from the link library and inserts
 them in the executable program.
@@ -28,7 +30,7 @@ True
 4. Which operating system component reads and executes programs?
 Loader
 
-- [ ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
+- [DONE ] 3.4.13 Section Review, Questions 1, 2, 3, 4, 5
 
 1. Create an uninitialized data declaration for a 16-bit signed integer.
 var1 SWORD
@@ -48,6 +50,8 @@ ing array, and assign the value to a symbolic constant named ArraySize:
 myArray WORD 20 DUP(?)
 
 - [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
+4) because it uses a lot of lines of codes. 
+5)
 
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
 
