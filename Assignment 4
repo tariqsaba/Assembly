@@ -1,0 +1,32 @@
+- [ ] 4.2.8 Section Review, Questions 1, 2, 3, 4, 5, 6	
+Use the following data for Questions 1-5:
+.data
+val1 BYTE 10h
+val2 WORD 8000h
+val3 DWORD 0FFFFh
+val4 WORD 7FFFh
+
+1. Write an instruction that increments val2.
+2. Write an instruction that subtracts val3 from EAX. 
+sub eax,val3
+3. Write instructions that subtract val4 from val2.
+mov ax,val4
+sub val2,ax
+4. If val2 is incremented by 1 using the ADD instruction, what will be the values of the Carry
+and Sign flags?
+
+5. If val4 is incremented by 1 using the ADD instruction, what will be the values of the Over-
+flow and Sign flags?
+
+6. Where indicated, write down the values of the Carry, Sign, Zero, and Overflow flags after
+each instruction has executed:
+mov ax,7FF0h
+add al,10h ; a. CF = SF = ZF = OF =
+add ah,1 ; b. CF = SF = ZF = OF =
+add ax,2 ; c. CF = SF = ZF = OF =
+
+- [ ] 4.3.8 Section Review, Questions 1,2,3,4,5
+
+- [ ] 4.4.5 Section Review, Questions 4,5
+
+- [ ] 4.10 Programming Exercises, Question 7
