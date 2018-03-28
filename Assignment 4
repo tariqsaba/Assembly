@@ -26,6 +26,11 @@ add ah,1 ; b. CF = SF = ZF = OF =
 add ax,2 ; c. CF = SF = ZF = OF =
 
 - [ ] 4.3.8 Section Review, Questions 1,2,3,4,5
+1. (True/False): The OFFSET operator always returns a 16-bit value.
+2. (True/False): The PTR operator returns the 32-bit address of a variable.
+3. (True/False): The TYPE operator returns a value of 4 for doubleword operands.
+4. (True/False): The LENGTHOF operator returns the number of bytes in an operand.
+5. (True/False): The SIZEOF operator returns the number of bytes in an operand.
 
 - [ ] 4.4.5 Section Review, Questions 4,5
 
