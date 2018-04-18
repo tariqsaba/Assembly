@@ -1,3 +1,28 @@
 5.9 Programming Exercises, Questions 10   
 - [ ] 5.9 Programming Exercises, Question 7 (You will need to do this in 32 bit) OR Write a program that uses the
 Random64 function from the Irvine64 library
+ 
+ 
+ fibonnachi:
+ n DWORD =0;
+ nminusd DWORD =0
+ nminus1 DWORD =1
+ mov RCX, 40 ; 40 times
+ 
+ startLoop:
+ mov n, nminusd
+ add n, nminus1
+ print n
+ mov nminusd,nminus1
+ mov nminus1, n
+ mov rax, nminus2
+ add rax, nminus1
+ call Writeint64 // to print the value of n 
+ call Crlf 
+ mov r14, nminus1
+ mov r15, rax
+ mov nminus2, nminus1
+ mov nminus1, rax // the value of n?
+ 
+ Loop startLoop
+  
