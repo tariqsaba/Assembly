@@ -7,6 +7,7 @@ val3 DWORD 0FFFFh
 val4 WORD 7FFFh
 
 1. Write an instruction that increments val2.
+inc val2
 2. Write an instruction that subtracts val3 from EAX. 
 sub eax,val3
 3. Write instructions that subtract val4 from val2.
@@ -14,16 +15,19 @@ mov ax,val4
 sub val2,ax
 4. If val2 is incremented by 1 using the ADD instruction, what will be the values of the Carry
 and Sign flags?
+The carry flag would be 0 and the sign flag 1.
 
 5. If val4 is incremented by 1 using the ADD instruction, what will be the values of the Over-
 flow and Sign flags?
+The overflow flag would be 1 and the sign flag 1;
+
 
 6. Where indicated, write down the values of the Carry, Sign, Zero, and Overflow flags after
 each instruction has executed:
 mov ax,7FF0h
-add al,10h ; a. CF = SF = ZF = OF =
-add ah,1 ; b. CF = SF = ZF = OF =
-add ax,2 ; c. CF = SF = ZF = OF =
+add al,10h ; a. CF =1 SF =0 ZF =1 OF =0
+add ah,1 ; b. CF = 0SF =1 ZF =0 OF =1
+add ax,2 ; c. CF =0 SF =1 ZF =0  OF =0
 
 - [ ] 4.3.8 Section Review, Questions 1,2,3,4,5
 1. (True/False): The OFFSET operator always returns a 16-bit value. False
@@ -54,5 +58,26 @@ mov ebx,myPointer
 mov eax,[ebx+4] ; f. EAX = 2
 
 
-- [ ] 4.10 Programming Exercises, Question 7 // was done in class! take it from a pal
-copy the code from the book!
+- [ ] 4.10 Programming Exercises, Question 7 //
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess proto,dwExitCode:dword
+
+.data
+	source BYTE "This is the source string",0
+	target BYTE SIZEOF source DUP('#')
+.code
+main proc
+
+	mov ecx, SIZEOF source
+	mov esi,0
+		L1:
+			mov al,source[ecx-1]
+			mov target[esi], al
+			add esi, TYPE source
+		loop L1
+
+	invoke ExitProcess,0
+main endp
+end main
