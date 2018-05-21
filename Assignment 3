@@ -8,8 +8,9 @@ no
 3. (Yes/No): Does the multiplication operator (*) have a higher precedence than the division
 operator (/) in integer expressions? 
 no
-*4. Create a single integer expression that uses all the operators from Section 3.1.2. Calculate
-the value of the expression.
+4. Create a single integer expression that uses all the operators from Section 3.1.2. Calculate
+the value of the expression.3
+(+3 - 2) / 2 * 2 MOD 7     = 2
 
 
 - [done ] 3.2.4 Section Review, Questions 4, 5
@@ -21,6 +22,7 @@ ExitProcess.
 
 - [done ] 3.3.3 Section Review, Questions 1, 2, 3, 4
 1. What types of files are produced by the assembler?
+object Files
 2. (True/False): The linker extracts assembled procedures from the link library and inserts
 them in the executable program.
 true
@@ -48,6 +50,8 @@ SDWORD
 Write a statement that causes the assembler to calculate the number of bytes in the follow-
 ing array, and assign the value to a symbolic constant named ArraySize:
 myArray WORD 20 DUP(?)
+ArraySize = ($ - myArray) / 2
+
 
 - [ ] 3.9.1 Short Answer, Questions 4, 5, 6, 25
 4) because it uses a lot of lines of codes. 
@@ -65,6 +69,8 @@ SDWORD.
 - [ ] 3.9.2 Algorithm Workbench, Questions 4, 7, 13
 4)Find out if you can declare a variable of type DWORD and assign it a negative
 value. What does this tell you about the assembler’s type checking?
+The assembler allows you to assign DWORD a negative value. This shows that the type checking is not very restrictive at all
+which is typical of assembly having less strict rules for what can be done.
 
 7)Declare an array of 120 uninitialized unsigned doubleword values.
 myArray DWORD 120 DUP(?) 
@@ -74,4 +80,23 @@ myTestString BYTE 500 DUP("TEST").
 
 - [ ] 3.10 Programming Exercises, Pick any 1 exercise
 
+Programming Exercise #1
+
+
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess PROTO,dwExitCode:DWORD
+.code
+main PROC
+	mov eax,5    ;A
+	mov ebx,6    ;B
+	mov ecx,1    ;C
+	mov edx,2    ;D
+	add eax,ebx    ;(A+B) 
+	add ecx,edx    ;(C+D)
+	sub eax,ecx    ;A = (A+B) - (C+D)
+	INVOKE ExitProcess,0
+main ENDP
+END main
 
