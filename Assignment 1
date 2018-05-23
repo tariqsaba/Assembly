@@ -89,7 +89,14 @@ c. 1111 1110 1101 1011: FEDB
 22 47,71
 
 25
+A	B 	A v B	 ¬ (A v B)
+F	F	  F	       T
+F	T	  T	       F
+T	F	  T 	     F
+T	T	  T	       F
+
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
+
 Write a function that receives a string containing a 32-bit hexadecimal integer. The function
 must return the string’s integer value.
 
