@@ -1,0 +1,56 @@
+;Assignment 11 Chapter 4.10 Programming Question 2
+
+;Write a program with a loop and indexed addressing that exchanges every pair of values in an array 
+;with an even number of elements.  Therefore, item i will exchange with item i+1, and item i+2 will 
+;exchange with item i+3, and so on
+
+
+
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess proto,dwExitCode:dword
+WriteInt proto
+Crlf proto
+WaitMsg proto
+
+;array must have even number of elements in order for there to be pairs that can exhange values
+.data
+	array DWORD 1,2,3,4,5,6,7,8,9,10
+.code
+main proc
+	mov esi, OFFSET array		;print array before element value shift
+	mov ecx, LENGTHOF array
+	call printArray
+	call Crlf
+
+	mov esi,OFFSET array
+	mov ecx,LENGTHOF array/2		
+L1:
+	mov eax,[esi]				;save 1st element of pair
+	mov ebx,[esi +TYPE DWORD]		;save 2nd element of pair
+	mov [esi], ebx				;give saved 2nd element of pair to first position
+	mov [esi +TYPE DWORD], eax		;give saved 1st element of pair to second position
+	add esi, 2*TYPE DWORD			;move pointer to first element of next pair
+	loop L1
+
+	mov esi, OFFSET array		;print array after element value shift
+	mov ecx, LENGTHOF array
+	call printArray
+	call Crlf
+
+	call WaitMsg
+
+	invoke ExitProcess,0
+main endp
+
+printArray PROC USES esi ecx eax
+printLoop:
+	mov eax, [esi]
+	call WriteInt
+	add esi,TYPE DWORD
+	loop printLoop
+	ret
+printArray  ENDP
+
+end main
