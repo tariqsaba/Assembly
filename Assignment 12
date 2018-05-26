@@ -1,0 +1,53 @@
+;Assignment 12 Chapter 4.10 Programming Exercise 8
+
+;Using a loop and indexed addressing, write code that rotates the members of a 32-bit integer array 
+;forward one position.  The value at the end of the array must wrap around to the first position.  
+;For example, the array [10,20,30,40] would be transformed into [40,10,20,30]
+
+.386
+.model flat,stdcall
+.stack 4096
+ExitProcess proto,dwExitCode:dword
+WriteInt proto
+Crlf proto
+WaitMsg proto
+
+.data
+	array DWORD 1,2,3,4,5,6,7,8,9;
+.code
+main proc
+	mov esi,OFFSET array		;1st print of array before rotation of numbers
+	mov ecx,LENGTHOF array
+printLoop1:
+	mov eax,[esi]
+	call WriteInt
+	add esi,TYPE DWORD
+	loop printLoop1
+	call Crlf
+
+	mov esi,OFFSET array
+	mov ecx,LENGTHOF array
+	mov eax,0			;0 temporarily placed in first element due to exchange
+L1:
+	xchg [esi],eax			;exchange values of element and eax
+	add esi, TYPE DWORD
+	loop L1
+
+	mov esi,OFFSET array		;set pointer to first element again
+	mov [esi],eax			;eax will be holding value of last element from last iteration
+					;so can replace first element with eax
+
+	mov esi,OFFSET array		;2nd print of array after rotation of numbers
+	mov ecx,LENGTHOF array
+printLoop2:
+	mov eax,[esi]
+	call WriteInt
+	add esi,TYPE DWORD
+	loop printLoop2
+	call Crlf
+
+	call WaitMsg			;pause untill user presses key
+
+	invoke ExitProcess,0
+main endp
+end main
