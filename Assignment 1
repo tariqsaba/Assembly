@@ -96,8 +96,40 @@ T	T	  T	       F
 
 - [ ] 1.7.2 Algorithm Workbench, Choose any 1 question 
 
-Write a function that receives a string containing a 32-bit hexadecimal integer. The function
-must return the string’s integer value.
+string getBinaryString(int decValue)
+{
+	int quotient = abs(decValue);
+	int remainder;
+	string binaryValString;
+
+	while (quotient > 0)
+	{
+		remainder = quotient % 2;
+		quotient = quotient / 2;
+		binaryValString.insert(0, std::to_string(remainder));
+	}
+	return binaryValString;
+}
+
+
 
 - [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 (1 point extra credit per question)
+1.
+X	Y	¬X	¬X v Y
+F	F	T	    T
+F	T	T   	T
+T	F	F   	T
+T	T	F   	T
+In all cases the Boolean expression ¬X v Y produces True.
+2.
+X	Y	X ^ Y
+F	F 	F
+F	T 	F
+T	F 	F
+T	T 	T
+The “and” in the Boolean expression X ^ Y make it so the only case where the output is true is when both X and Y are true.
+3. True
+4. False
+5. True
+
 
