@@ -1,0 +1,61 @@
+;Assignment 13 Bubblesort
+
+;Given an array of 8-byte integers, sort the array using the Bubble Sort algorithm. Your program should print the array
+;before and after the sort takes place. If you are unable to attend the lecture where the algorithm is presented, you can
+;find it here: https://www.geeksforgeeks.org/bubble-sort/
+
+ExitProcess proto
+WriteInt64 proto
+ReadString proto
+Crlf proto
+
+.data
+	rangeDec QWORD 1						;var rangeDec shortens each L2 iteration since end numbers
+	array QWORD 7,10,4,7,8,11,232,4,6,4,3,2,5,7,4,43,221,123,3,5	;will be the highest and don't have to be compared for swap
+
+.code
+main proc
+	mov rcx,LENGTHOF array		;first print of array
+	mov rsi,OFFSET array
+	call printArray
+
+	mov rcx,LENGTHOF array-1	;1st loop runs the number of elements in array minus one
+L1:
+	push rcx			;save rcx on stack for counter of outer L1 loop
+	mov rcx,LENGTHOF array			
+	sub rcx,rangeDec		;Each inner L2 iteration will be shorter be one more element
+	mov rsi,OFFSET array
+L2:
+	mov rax,[rsi]
+	mov rbx,[rsi + TYPE QWORD]
+	cmp rax,rbx
+	jng IncPoint			;if the 1st element looked at is not greater than, skip to incrementing pointer.
+	mov [rsi],rbx			;otherwise if it is greater then 2nd, swap values with 2nd element
+	mov [rsi + TYPE QWORD],rax
+IncPoint:
+	add rsi,TYPE QWORD
+	loop L2
+	add rangeDec,1
+	pop rcx				;get rcx value back for counter of L1 loop
+	loop L1
+
+	mov rcx,LENGTHOF array		;second print of array
+	mov rsi,OFFSET array
+	call printArray
+	
+	call ReadString			;64bit has no WaitMsg so use ReadString to pause program
+
+    call ExitProcess
+main endp
+
+printArray PROC USES rax rsi rcx
+printLoop:
+	mov rax,[rsi]
+	add rsi,TYPE QWORD
+	call WriteInt64
+	loop printLoop
+	call Crlf
+	ret
+printArray ENDP
+
+end
